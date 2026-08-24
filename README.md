@@ -5,6 +5,7 @@
 **Deploy — Helm chart for deploying [rubra-server](https://github.com/pm1715/rubra-server) on Kubernetes.**
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
+[![Helm OCI](https://img.shields.io/badge/ghcr.io-charts%2Frubra-blue?logo=helm)](https://github.com/pm1715/rubra-deploy/pkgs/container/charts%2Frubra)
 
 ---
 
@@ -19,6 +20,14 @@ This builds the actual `rubra-server` `Dockerfile`, loads it into a throwaway [k
 ---
 
 ## Install
+
+### From the OCI registry (recommended)
+
+```bash
+helm install rubra oci://ghcr.io/pm1715/charts/rubra --version 0.1.0
+```
+
+### From source
 
 ```bash
 git clone https://github.com/pm1715/rubra-deploy
@@ -91,6 +100,10 @@ kubectl delete pvc -l app.kubernetes.io/instance=rubra
 ```
 
 ---
+
+## Security & Code of Conduct
+
+This repo follows the same [Security Policy](https://github.com/pm1715/rubra-sdk/blob/main/SECURITY.md) and [Code of Conduct](https://github.com/pm1715/rubra-sdk/blob/main/CODE_OF_CONDUCT.md) as rubra-sdk.
 
 ## License
 
