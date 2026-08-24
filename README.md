@@ -105,6 +105,10 @@ kubectl delete pvc -l app.kubernetes.io/instance=rubra
 
 This repo follows the same [Security Policy](https://github.com/pm1715/rubra-sdk/blob/main/SECURITY.md) and [Code of Conduct](https://github.com/pm1715/rubra-sdk/blob/main/CODE_OF_CONDUCT.md) as rubra-sdk.
 
+## Author
+
+Rubra was designed and built by **Prayansh Mishra** ([@pm1715](https://github.com/pm1715) · [LinkedIn](https://www.linkedin.com/in/prayansh-mishra-02a57724b/)).
+
 ## License
 
 Apache 2.0 — see [LICENSE](LICENSE).
