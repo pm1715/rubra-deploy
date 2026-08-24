@@ -1,0 +1,67 @@
+replicaCount: 1
+
+image:
+  repository: ghcr.io/pm1715/rubra-server
+  pullPolicy: IfNotPresent
+  tag: "0.1.0"
+
+service:
+  type: ClusterIP
+  port: 8000
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  hosts:
+    - host: rubra.example.com
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
+
+persistence:
+  enabled: true
+  storageClass: ""
+  accessMode: ReadWriteOnce
+  size: 5Gi
+  mountPath: /data
+
+env:
+  RUBRA_HOST: "0.0.0.0"
+  RUBRA_PORT: "8000"
+  RUBRA_DEBUG: "false"
+  RUBRA_CORS_ORIGINS: '["*"]'
+  # Override database to PostgreSQL if deploying with external DB:
+  # RUBRA_DATABASE_URL: "postgresql://user:pass@postgres:5432/rubra"
+
+secrets:
+  # RUBRA_API_KEY stored as a Kubernetes secret
+  apiKeySecretName: ""
+  apiKeySecretKey: "api-key"
+
+livenessProbe:
+  httpGet:
+    path: /api/v1/health
+    port: 8000
+  initialDelaySeconds: 10
+  periodSeconds: 30
+
+readinessProbe:
+  httpGet:
+    path: /api/v1/health
+    port: 8000
+  initialDelaySeconds: 5
+  periodSeconds: 10
+
+nodeSelector: {}
+tolerations: []
+affinity: {}

@@ -1,0 +1,15 @@
+apiVersion: v2
+name: rubra
+description: Rubra — Agentic evaluation framework server
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
+keywords:
+  - rubra
+  - llm
+  - agent
+  - evaluation
+  - observability
+maintainers:
+  - name: Prayansh Mishra
+home: https://github.com/pm1715/rubra-server
