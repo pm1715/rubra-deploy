@@ -24,7 +24,7 @@ This builds the actual `rubra-server` `Dockerfile`, loads it into a throwaway [k
 ### From the OCI registry (recommended)
 
 ```bash
-helm install rubra oci://ghcr.io/pm1715/charts/rubra --version 0.1.0
+helm install rubra oci://ghcr.io/pm1715/charts/rubra --version 0.1.3
 ```
 
 ### From source
