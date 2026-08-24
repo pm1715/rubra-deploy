@@ -1,6 +1,8 @@
-# Rubra Deploy
+<p align="center">
+  <img src="assets/wordmark.svg" alt="Rubra" width="380"/>
+</p>
 
-**Helm chart for deploying [rubra-server](https://github.com/pm1715/rubra-server) on Kubernetes.**
+**Deploy — Helm chart for deploying [rubra-server](https://github.com/pm1715/rubra-server) on Kubernetes.**
 
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue)](LICENSE)
 
