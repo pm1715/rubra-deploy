@@ -6,6 +6,16 @@
 
 ---
 
+## Testing this chart for real (no cloud cluster needed)
+
+```bash
+./scripts/test-in-kind.sh
+```
+
+This builds the actual `rubra-server` `Dockerfile`, loads it into a throwaway [kind](https://kind.sigs.k8s.io/) (Kubernetes-in-Docker) cluster, installs this chart via Helm, waits for a healthy rollout, and port-forwards it to `localhost:8000` — a genuine end-to-end deployment test with no image registry or real cluster required. Needs `docker`, `kind`, `helm`, and `kubectl`, which the [rubra-server devcontainer/Codespace](https://github.com/pm1715/rubra-server#try-the-full-stack-now--zero-cost-zero-setup) installs automatically.
+
+---
+
 ## Install
 
 ```bash
